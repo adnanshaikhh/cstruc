@@ -10,6 +10,7 @@ Options:
 """
 
 from docopt import docopt
+import graph
 
 __version__ = "0.0.1"
 
@@ -23,7 +24,7 @@ def open_folder(folder_path):
     Returns:
         None
     '''
-    pass
+    c_graph = graph.Graph()
 
 def main():
     '''
