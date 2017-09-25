@@ -13,7 +13,7 @@ from docopt import docopt
 import sys
 import graph
 import traverse
-import serve
+import web
 
 __version__ = "0.0.1"
 
@@ -44,6 +44,13 @@ def open_folder(folder_path):
 
     json = construct_json(c_graph.to_json())
 
+    with web.Server("temp") as server:
+        server.write(json)
+        server.run(True, 8085)
+
+    print('Shutting down')
+
+
 def main():
     '''
     Parses the arguments
@@ -54,6 +61,7 @@ def main():
     Returns:
         None
     '''
+    open_folder("lol")
     arguments = docopt(__doc__, version=__version__)
     if arguments['open']:
         open_folder(arguments['<folder-path>'])

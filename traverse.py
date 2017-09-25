@@ -18,7 +18,6 @@ def try_prefixes(path, prefixes):
 
     return path
 
-
 def get_includes(filename, prefixes):
     includes = set()
     with open(filename) as source:
