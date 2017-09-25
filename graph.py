@@ -70,4 +70,4 @@ class Graph:
     def __repr__(self):
         num_nodes = len(self.nodes)
         num_edges = len(self.edges)
-        return "<Graph: nodes = " + num_nodes + ", edges = " + num_edges + ">"
+        return "<Graph: nodes = " + str(num_nodes) + ", edges = " + str(num_edges) + ">"
