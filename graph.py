@@ -56,7 +56,7 @@ class Graph:
         edge = {}
         edge['id'] = len(self.edges)
         edge['size'] = 10
-        edge['type'] = 'curvedArrow'
+        edge['type'] = 'arrow'
 
         source_node, target_node = target_node, source_node
         

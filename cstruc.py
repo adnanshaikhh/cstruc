@@ -46,7 +46,7 @@ def open_folder(folder_path):
 
     with web.Server("temp") as server:
         server.write(json)
-        server.run(True, 8085)
+        server.run(True, 8093)
 
     print('Shutting down')
 
@@ -61,7 +61,6 @@ def main():
     Returns:
         None
     '''
-    open_folder("lol")
     arguments = docopt(__doc__, version=__version__)
     if arguments['open']:
         open_folder(arguments['<folder-path>'])
